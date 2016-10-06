@@ -1,9 +1,6 @@
 package me.androidkotlinblueprint.common.domain.base.usecase
 
 import android.net.ConnectivityManager
-import me.androidkotlinblueprint.common.domain.base.usecase.NetworkUseCase
-import me.androidkotlinblueprint.common.domain.base.usecase.NoConnectionException
-import me.androidkotlinblueprint.common.domain.base.usecase.SingleUseCase
 import rx.Scheduler
 import rx.Single
 import rx.android.schedulers.AndroidSchedulers

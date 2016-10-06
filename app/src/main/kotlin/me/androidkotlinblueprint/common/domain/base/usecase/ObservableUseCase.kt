@@ -1,6 +1,5 @@
 package me.androidkotlinblueprint.common.domain.base.usecase
 
-import me.androidkotlinblueprint.common.domain.base.usecase.UseCase
 import rx.Observable
 import rx.Scheduler
 import rx.android.schedulers.AndroidSchedulers
