@@ -1,8 +1,8 @@
-package me.androidkotlinblueprint.common.ui.base
+package me.androidkotlinblueprint.common.ui
 
 import android.support.annotation.CallSuper
-import me.androidkotlinblueprint.common.ui.base.MvpView
-import me.androidkotlinblueprint.common.ui.base.Presenter
+import me.androidkotlinblueprint.common.ui.MvpView
+import me.androidkotlinblueprint.common.ui.Presenter
 import rx.Subscription
 import rx.lang.kotlin.plusAssign
 import rx.subscriptions.CompositeSubscription

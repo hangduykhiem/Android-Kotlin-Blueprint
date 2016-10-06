@@ -1,4 +1,4 @@
-package me.androidkotlinblueprint.common.domain.base.usecase
+package me.androidkotlinblueprint.common.domain.usecase
 
 import rx.Completable
 import rx.Scheduler

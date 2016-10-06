@@ -1,4 +1,4 @@
-package me.androidkotlinblueprint.common.domain.base.usecase
+package me.androidkotlinblueprint.common.domain.usecase
 
 /**
  * Created by ilyazorin on 20/09/16.
