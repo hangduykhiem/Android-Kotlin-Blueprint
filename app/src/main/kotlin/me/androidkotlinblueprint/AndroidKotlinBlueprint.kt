@@ -5,7 +5,6 @@ import com.squareup.leakcanary.LeakCanary
 import me.androidkotlinblueprint.common.di.ApplicationComponent
 import me.androidkotlinblueprint.common.di.ApplicationModule
 import me.androidkotlinblueprint.common.di.DaggerApplicationComponent
-import me.androidkotlinblueprint.common.di.NetworkModule
 import timber.log.Timber
 
 /**
