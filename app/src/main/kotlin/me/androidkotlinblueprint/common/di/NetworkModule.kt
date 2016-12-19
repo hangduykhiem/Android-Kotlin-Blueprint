@@ -23,7 +23,7 @@ import javax.inject.Singleton
 class NetworkModule {
 
     companion object {
-        const val BASE_URL = "http swapi.co/api/planets/1/"
+        const val BASE_URL = "http://www.omdbapi.com/?"
     }
 
     @Singleton
