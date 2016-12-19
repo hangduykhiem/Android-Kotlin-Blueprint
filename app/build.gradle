@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
 
     defaultConfig {
         applicationId "me.androidkotlinblueprint"
         minSdkVersion 16
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -56,7 +56,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     // Google Support Libraries
-    def support_version = '24.2.1'
+    def support_version = '25.1.0'
     compile "com.android.support:support-v4:$support_version"
     compile "com.android.support:appcompat-v7:$support_version"
     compile "com.android.support:design:$support_version"
@@ -64,10 +64,8 @@ dependencies {
     compile "com.android.support:cardview-v7:$support_version"
 
     // RxJava
-    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.4'
     compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'io.reactivex:rxkotlin:0.60.0'
-    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
 
     // Dagger 2
     def dagger_version = '2.7'
@@ -99,23 +97,23 @@ dependencies {
     kapt "com.jakewharton:butterknife-compiler:$butterknife_version"
 
     // Conductor
-    def conductor_version = '2.0.3'
+    def conductor_version = '2.0.5'
     compile "com.bluelinelabs:conductor:$conductor_version"
     compile "com.bluelinelabs:conductor-support:$conductor_version"
 
     // Epoxy
-    def epoxy_version = '1.3.0'
+    def epoxy_version = '1.5.0'
     compile "com.airbnb.android:epoxy:$epoxy_version"
     kapt "com.airbnb.android:epoxy-processor:$epoxy_version"
 
     // Timber
-    compile 'com.jakewharton.timber:timber:4.1.2'
+    compile 'com.jakewharton.timber:timber:4.4.0'
 
     // LeakCanary
-    def leakcanary_version = '1.4'
+    def leakcanary_version = '1.5'
     debugCompile "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
     releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary_version"
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4'
+    testCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary_version"
 
     // JUnit
     testCompile 'junit:junit:4.12'
@@ -127,9 +125,9 @@ dependencies {
 //    testCompile "org.junit.platform:junit-platform-runner:1.0.0-M2"
 
     // Mockito
-    testCompile "org.mockito:mockito-core:2.1.0"
+    testCompile "org.mockito:mockito-core:2.3.9"
 //    testCompile "com.nhaarman:mockito-kotlin:0.5.2"
 
     // Robolectric
-    testCompile 'org.robolectric:robolectric:3.1.1'
+    testCompile 'org.robolectric:robolectric:3.1.4'
 }

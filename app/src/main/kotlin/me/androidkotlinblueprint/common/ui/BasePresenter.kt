@@ -1,10 +1,7 @@
 package me.androidkotlinblueprint.common.ui
 
 import android.support.annotation.CallSuper
-import me.androidkotlinblueprint.common.ui.MvpView
-import me.androidkotlinblueprint.common.ui.Presenter
 import rx.Subscription
-import rx.lang.kotlin.plusAssign
 import rx.subscriptions.CompositeSubscription
 
 /**
@@ -31,6 +28,6 @@ abstract class BasePresenter<V : MvpView> : Presenter<V> {
     }
 
     fun addSubscription(subscription: Subscription) {
-        subscriptions += subscription
+        subscriptions.add(subscription)
     }
 }

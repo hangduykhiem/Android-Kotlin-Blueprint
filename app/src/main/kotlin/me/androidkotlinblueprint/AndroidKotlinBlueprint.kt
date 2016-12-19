@@ -32,7 +32,6 @@ class AndroidKotlinBlueprint : Application() {
     private fun initDependencyGraph() {
         graph = DaggerApplicationComponent.builder()
                 .applicationModule(ApplicationModule(this))
-                .networkModule(NetworkModule())
                 .build()
         graph.injectTo(this)
     }
