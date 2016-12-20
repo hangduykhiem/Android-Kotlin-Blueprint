@@ -1,24 +1,34 @@
 package me.androidkotlinblueprint.common.ui
 
-import android.support.annotation.CallSuper
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.bluelinelabs.conductor.Controller
+import me.androidkotlinblueprint.AndroidKotlinBlueprint
+import me.androidkotlinblueprint.common.di.ApplicationComponent
+import javax.inject.Inject
 
 /**
  * Base Controller, act as View in MVP
  *
  * Created by hduykhiem on 19/12/2016.
  */
-abstract class BaseController : Controller(), MvpView {
+abstract class BaseController<V : MvpView, T : BasePresenter<V>>(args: Bundle) : Controller(args) {
 
-    init {
-        initializeController()
+    @Inject
+    protected lateinit var presenter: T
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
+        injectDependencies(AndroidKotlinBlueprint.graph)
+        presenter.bindView(this as V)
+        return inflateView(inflater, container)
     }
 
-    @CallSuper
-    fun initializeController() {
-        getPresenter().bindView(this)
-        getPresenter().initialize(args)
-    }
+    abstract fun injectDependencies(graph: ApplicationComponent)
 
-    abstract fun getPresenter(): Presenter<MvpView>
+    abstract fun inflateView(inflater: LayoutInflater, container: ViewGroup): View
+
+
+
 }
