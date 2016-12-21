@@ -20,5 +20,4 @@ class SearchController() : Controller() {
         (view.findViewById(R.id.tv_title) as TextView).text = "Hello World"
         return view
     }
-
 }
